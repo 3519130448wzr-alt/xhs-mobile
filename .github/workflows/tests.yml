@@ -20,8 +20,8 @@ jobs:
     env:
       TEST_DATABASE_URL: postgresql+psycopg://xhs_test:test_only_password@localhost:5432/xhs_mobile_test
     steps:
-      - uses: actions/checkout@v4
-      - uses: astral-sh/setup-uv@v6
+      - uses: actions/checkout@v7
+      - uses: astral-sh/setup-uv@v10
         with:
           version: "0.12.13"
           python-version: "3.12"
