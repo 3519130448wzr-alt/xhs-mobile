@@ -1,0 +1,64 @@
+# SYNTHETIC TEST DATA. NOT XIAOHONGSHU SELECTORS. NEVER REAL COLLECTION EVIDENCE.
+name = "SYNTHETIC-offline-tests-only"
+verified = true
+synthetic = true
+app_package = "test.synthetic.app"
+app_version = "SYNTHETIC-1"
+reference_resolution = [1080, 1920]
+calibration_evidence = ["SYNTHETIC: fixtures created for offline testing, not actual UI"]
+candidate_selector = {resource_id = "synthetic/card"}
+candidate_video_marker = {resource_id = "synthetic/video-badge"}
+body_complete_marker = {resource_id = "synthetic/body-end"}
+body_incomplete_markers = [{resource_id = "synthetic/truncated"}]
+title_not_displayed_marker = {resource_id = "synthetic/no-title"}
+
+[pages.home]
+all = [{resource_id = "synthetic/home"}]
+[pages.search]
+all = [{resource_id = "synthetic/search"}]
+[pages.results]
+all = [{resource_id = "synthetic/results"}]
+[pages.detail]
+all = [{resource_id = "synthetic/image-text-detail"}]
+[pages.video]
+all = [{resource_id = "synthetic/video"}]
+[pages.loading]
+all = [{resource_id = "synthetic/loading"}]
+[pages.login]
+all = [{resource_id = "synthetic/login"}]
+[pages.verification]
+all = [{resource_id = "synthetic/verification"}]
+[pages.restricted]
+all = [{resource_id = "synthetic/restricted"}]
+[pages.rate_limited]
+all = [{resource_id = "synthetic/rate-limited"}]
+
+[actions]
+search_entry = {resource_id = "synthetic/search-entry"}
+search_input = {resource_id = "synthetic/search-input"}
+search_submit = {resource_id = "synthetic/search-submit"}
+image_text_filter = {resource_id = "synthetic/image-text-filter"}
+expand_body = {resource_id = "synthetic/expand-body"}
+back_to_results = {resource_id = "synthetic/back-results"}
+
+[fields.title]
+selector = {resource_id = "synthetic/title"}
+[fields.body]
+selector = {resource_id = "synthetic/body"}
+[fields.author]
+selector = {resource_id = "synthetic/author"}
+[fields.published_at]
+selector = {resource_id = "synthetic/published-at"}
+[fields.likes]
+selector = {resource_id = "synthetic/likes"}
+[fields.favorites]
+selector = {resource_id = "synthetic/favorites"}
+[fields.comments]
+selector = {resource_id = "synthetic/comments"}
+[fields.tags]
+platform_topic = true
+selector = {resource_id = "synthetic/tag"}
+[fields.note_id]
+selector = {resource_id = "synthetic/note-id"}
+[fields.note_url]
+selector = {resource_id = "synthetic/note-url"}

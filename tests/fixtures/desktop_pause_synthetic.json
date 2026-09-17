@@ -1,0 +1,22 @@
+[
+  {"event": "batch_created", "batch_id": "SYNTHETIC-batch"},
+  {"event": "batch_started", "batch_id": "SYNTHETIC-batch", "device_id": "SYNTHETIC-device"},
+  {"event": "batch_task_started", "batch_id": "SYNTHETIC-batch", "task_id": "SYNTHETIC-task", "keyword": "SYNTHETIC 暂停测试"},
+  {"event": "batch_task_finished", "batch_id": "SYNTHETIC-batch", "task_id": "SYNTHETIC-task", "status": "paused", "observations": 1, "eligible_observations": 1},
+  {
+    "batches": [
+      {
+        "id": "SYNTHETIC-batch", "device_id": "SYNTHETIC-device", "status": "paused",
+        "stop_reason": "operator_pause", "pause_requested": true,
+        "tasks": [
+          {"id": "SYNTHETIC-task", "device_id": "SYNTHETIC-device", "keyword": "SYNTHETIC 暂停测试", "target": 3,
+           "status": "paused", "stop_reason": "operator_pause", "pause_requested": true,
+           "observation_count": 1, "eligible_count": 1, "known_unique": 1,
+           "human_verified_unique": 0, "identity_unconfirmed": 0}
+        ]
+      }
+    ],
+    "policy_states": [],
+    "real_device_acceptance": "synthetic_not_real"
+  }
+]

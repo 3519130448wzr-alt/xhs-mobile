@@ -1,0 +1,31 @@
+# UNCALIBRATED. These empty rules are intentional; no Xiaohongshu control IDs are guessed.
+# Capture real screens with doctor/snapshot before filling this profile.
+name = "lab-calibration-required"
+verified = false
+synthetic = false
+app_package = ""
+app_version = ""
+reference_resolution = [0, 0]
+calibration_evidence = []
+
+[pages]
+# Page rule: { all = [{resource_id = "OBSERVED_REAL_ID"}], any = [...] }
+# Required pages: home, search, results, detail. detail must positively identify a
+# graphic/text note. Add video, loading, login, verification, restricted and rate_limited
+# only from real evidence. Conflicting markers classify as unknown.
+
+[actions]
+# Required: search_entry, search_input, search_submit.
+# Optional: image_text_filter, expand_body, back_to_results.
+# Selector: exact resource_id / text / content_desc / class_name attributes.
+
+[fields]
+# Each field: selector={...}, attribute="text" or "content-desc", join="\n".
+# Optional OCR: ocr_region=[left, top, right, bottom], calibrated to resolution.
+# Fields: title, body, author, published_at, likes, favorites, comments, tags,
+# note_id (exact UI identity, never OCR), note_url (displayed trusted link).
+# Required top-level tables, placed before [pages] in your completed profile:
+# candidate_selector, body_complete_marker; optional candidate_video_marker,
+# body_incomplete_markers=[...], title_not_displayed_marker.
+# An absent title is not proof that the app intentionally omits titles.
+# A body without an expand button is not proof of completeness.

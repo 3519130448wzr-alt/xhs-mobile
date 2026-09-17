@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- SYNTHETIC TEST DATA. This is not a captured Xiaohongshu UI. -->
+<hierarchy>
+  <node resource-id="synthetic/image-text-detail" bounds="[0,0][1080,1920]">
+    <node resource-id="synthetic/title" text="SYNTHETIC 测试标题" bounds="[10,100][1000,180]"/>
+    <node resource-id="synthetic/author" text="SYNTHETIC 作者" bounds="[10,190][1000,250]"/>
+    <node resource-id="synthetic/body" text="SYNTHETIC 正文，保留原文。" bounds="[10,260][1000,600]"/>
+    <node resource-id="synthetic/body-end" text="SYNTHETIC 完整正文标记"/>
+    <node resource-id="synthetic/likes" text="1.2万"/>
+    <node resource-id="synthetic/favorites" text="0"/>
+    <node resource-id="synthetic/tag" text="#synthetic"/>
+    <node resource-id="synthetic/tag" text="#测试"/>
+    <node resource-id="synthetic/note-id" text="0123456789abcdef01234567"/>
+  </node>
+</hierarchy>

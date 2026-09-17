@@ -1,0 +1,31 @@
+name: Offline and PostgreSQL checks
+on: [push, pull_request]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:17
+        env:
+          POSTGRES_USER: xhs_test
+          POSTGRES_PASSWORD: test_only_password
+          POSTGRES_DB: xhs_mobile_test
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U xhs_test -d xhs_mobile_test"
+          --health-interval 5s
+          --health-timeout 5s
+          --health-retries 10
+    env:
+      TEST_DATABASE_URL: postgresql+psycopg://xhs_test:test_only_password@localhost:5432/xhs_mobile_test
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+        with:
+          version: "0.12.13"
+          python-version: "3.12"
+      - run: uv sync --locked
+      - run: uv run ruff check .
+      - run: uv run pytest
+      - run: uv build

@@ -1,0 +1,24 @@
+.venv/
+.tools/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.env
+config.local.toml
+profiles/*.local.toml
+var/
+dist/
+*.egg-info/
+.DS_Store
+desktop/.build/
+desktop/.swiftpm/
+
+# Local operator and real-device validation records. These may contain private
+# cloud resource identifiers, task IDs, evidence paths, or lab-specific state.
+AGENTS.md
+docs/IMPLEMENTATION_STATUS.md
+docs/OPEN_500_VERIFICATION.md
+docs/QUALITY_UPGRADE_VALIDATION.md
+docs/PERFORMANCE.md
+docs/LAB_RUN.md
