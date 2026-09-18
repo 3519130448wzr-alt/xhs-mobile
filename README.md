@@ -1,5 +1,7 @@
 # xhs-mobile
 
+[![Offline and PostgreSQL checks](https://github.com/3519130448wzr-alt/xhs-mobile/actions/workflows/tests.yml/badge.svg?branch=main)](https://github.com/3519130448wzr-alt/xhs-mobile/actions/workflows/tests.yml)
+
 面向真实 Android 设备的小红书图文笔记采集工具，提供设备诊断、证据驱动的页面校准、关键词采集、持久化恢复、人工审阅和 CSV/JSONL 导出。正常运行不依赖 Codex 或大模型服务。
 
 > 本项目用于研究和经过授权的自动化场景。使用者需自行确认账号、数据和自动化行为符合适用的法律、平台规则和所在机构的要求。项目不提供验证码破解、身份伪造或绕过明确访问限制的功能。
